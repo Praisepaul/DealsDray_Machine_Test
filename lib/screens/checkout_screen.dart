@@ -25,7 +25,6 @@ class CheckoutScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Confirm order logic
                 //Navigator.pushReplacementNamed(context, '/order-confirmation');
               },
               child: const Text('Confirm Order'),

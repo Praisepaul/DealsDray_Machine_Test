@@ -21,15 +21,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        fit: StackFit.expand,  // Expands to fill the screen
+        fit: StackFit.expand,  
         children: [
-          // Fullscreen image
           Image.asset(
-            'assets/dealsdray_logo.png',  // DealsDray logo
-            fit: BoxFit.cover,            // Ensures the image covers the entire screen
+            'assets/dealsdray_logo.png',  
+            fit: BoxFit.cover,            
           ),
           
-          // Optional loading indicator in the center
           const Positioned(
             top: 368,
             left: 0,

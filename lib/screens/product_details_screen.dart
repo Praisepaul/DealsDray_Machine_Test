@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../widgets/product_card.dart';
 
 class ProductGrid extends StatelessWidget {
-  // List of image paths for the products
   final List<String> productImages = [
     'assets/clothing.png',
     'assets/electronics.png',
@@ -23,9 +22,8 @@ class ProductGrid extends StatelessWidget {
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
-      itemCount: 10, // Number of products
+      itemCount: 10,
       itemBuilder: (context, index) {
-        // Cycle through the 4 images using modulus operator
         String imagePath = productImages[index % productImages.length];
 
         return ProductCard(

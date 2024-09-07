@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 3, // Example number of items in the cart
+              itemCount: 3,
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text('Product $index'),

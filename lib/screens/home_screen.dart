@@ -15,13 +15,16 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isSearching = false;
   TextEditingController _searchController = TextEditingController();
 
-  int _selectedIndex = 0;
+int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-    // Navigate to different screens based on the index
+
+    if (index == 3) {
+      Navigator.pushNamed(context, '/cart');
+    }
   }
 
   @override
@@ -138,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            // Products List (2 items per row)
+            // Products List 
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
@@ -155,12 +158,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),
-              itemCount: 10, // Number of products
+              itemCount: 10,
               itemBuilder: (context, index) {
                 return ProductCard(
                   productName: 'Product $index',
                   price: 100 + index * 10,
-                  imagePath: 'assets/product_image.png', // Replace with actual images
+                  imagePath: 'assets/product_image.png',
                 );
               },
             ),
@@ -180,8 +183,10 @@ class _HomeScreenState extends State<HomeScreen> {
       // Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red, // Color when selected
+        selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
         items: [
           const BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -206,10 +211,6 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Profile',
           ),
         ],
-        currentIndex: 0, // Active index, set dynamically based on navigation
-        onTap: (index) {
-          // Handle navigation between tabs
-        },
       ),
     );
   }

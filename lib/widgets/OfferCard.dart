@@ -12,7 +12,7 @@ class OfferCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Image.asset(imagePath, fit: BoxFit.cover, width: 200), // Replace with offer image
+      child: Image.asset(imagePath, fit: BoxFit.cover, width: 200), 
     );
   }
 }
