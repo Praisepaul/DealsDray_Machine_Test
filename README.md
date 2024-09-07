@@ -2,6 +2,9 @@
 
 This is a **DealsDray Shopping App** built using **Flutter**. The app provides a seamless shopping experience with features like browsing products, viewing offers, completing KYC, adding items to the cart, and more.
 
+## Demo Video
+[![Watch the demo](assets/screenshots/home.png)](https://stdntpartners-my.sharepoint.com/:v:/g/personal/praise_paul_studentambassadors_com/EaTsG_qGZeVAkqPC8VFrjLIBhd6gSlqmCY-giPRYlT_zmA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZpWpFm)
+
 ## Features
 
 - **Splash Screen**: Displays the DealsDray logo and transitions to the login screen.
