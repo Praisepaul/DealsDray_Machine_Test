@@ -12,8 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _isSearching = false;
-  TextEditingController _searchController = TextEditingController();
+  final bool _isSearching = false;
+  final TextEditingController _searchController = TextEditingController();
 
 int _selectedIndex = 0;
 
@@ -35,7 +35,7 @@ int _selectedIndex = 0;
           children: [
             // Hamburger Menu Icon
             IconButton(
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
               onPressed: () {
               },
             ),
@@ -44,7 +44,7 @@ int _selectedIndex = 0;
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Container(
+                child: SizedBox(
                   height: 40,
                   child: TextField(
                     decoration: InputDecoration(
@@ -55,9 +55,9 @@ int _selectedIndex = 0;
                         borderRadius: BorderRadius.circular(20.0),
                         borderSide: BorderSide.none,
                       ),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                       suffixIcon: IconButton(
-                        icon: Icon(Icons.search),
+                        icon: const Icon(Icons.search),
                         onPressed: () {
                           // Handle search action
                           print("Search clicked");
@@ -71,7 +71,7 @@ int _selectedIndex = 0;
             
             // Menu Icon on the right
             IconButton(
-              icon: Icon(Icons.notifications),
+              icon: const Icon(Icons.notifications),
               onPressed: () {
                 // Handle additional menu actions (e.g., open options)
               },
@@ -90,7 +90,7 @@ int _selectedIndex = 0;
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: [
+                  children: const [
                     OfferCard(imagePath: 'assets/offer1.png'),
                     OfferCard(imagePath: 'assets/offer2.png'),
                     OfferCard(imagePath: 'assets/offer3.png'),
@@ -129,7 +129,7 @@ int _selectedIndex = 0;
               padding: const EdgeInsets.all(8.0),
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
+                children: const [
                   CategoryCard(categoryName: 'Electronics', icon: Icons.devices),
                   CategoryCard(categoryName: 'Groceries', icon: Icons.shopping_basket),
                   CategoryCard(categoryName: 'Clothing', icon: Icons.checkroom),
@@ -177,7 +177,7 @@ int _selectedIndex = 0;
           // Handle chat action
         },
         backgroundColor: Colors.blueAccent,
-        child: Icon(Icons.chat),
+        child: const Icon(Icons.chat),
       ),
 
       // Bottom Navigation Bar
