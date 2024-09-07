@@ -17,7 +17,7 @@ This is a **DealsDray Shopping App** built using **Flutter**. The app provides a
 - **Floating Chat Button**: Enables in-app customer support via chat.
 
 ## Directory Structure
-<!-- lib/
+lib/
 lib/
 ├── main.dart                       # Entry point of the Flutter app
 ├── screens/                        # Folder containing all the app screens
@@ -50,7 +50,7 @@ lib/
 │   ├── cart_provider.dart          # State management for cart (if using Provider)
 
 
--->
+
 
 ## App Screenshots
 ![Loading Page](assets/dealsdray_logo.png)
